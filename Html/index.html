@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sériescope</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- <link href="CSS/style.css" rel="stylesheet"> -->
+</head>
+
+<body class="bg-black text-white min-h-screen">
+    <header class="max-w-5xl mx-auto px-4 py-5">
+        <nav>
+            <h3 class="text-2xl font-bold "> <b>Sériescope</b></h3>
+        </nav>
+    </header>
+    <main class="max-w-5xl mx-auto px-4 pb-10">
+        <section>
+            <h1 class="text-2xl font-bold"> Explore les séries TV</h1>
+            <p class="text-sm text-zinc-400"> Retrouve tes séries préférées et enrichis le catalogue.</p>
+        </section>
+
+        <section class=" ajouter  bg-zinc-900 border border-zinc-800 p-5 rounded-2xl  mt-5">
+            <h3 class="font-bold">Ajouter une série</h3>
+            <p class="text-xs text-zinc-400">Les champs marqués d’un * sont obligatoires.</p>
+
+            <form id="form-ajout"  class="grid grid-cols-2 gap-4 mt-4" >
+
+                    <div class="form-top ">
+                        <label for="nom" class=" block">Nom de la série *</label>
+                        <input class="bg-zinc-800 border border-zinc-700 p-3 rounded-lg w-full  " type="text" name="nom"
+                            id="nom" placeholder="Ex. The Bear" >
+                         <p id="err-nom" class="text-red-500 text-xs mt-1"></p>
+                          </div>
+                         <div>
+                        <label for="genre" class=" block"> Genre(s) *<span class="text-xs text-zinc-400">séparés par des
+                                virgules</span></label>
+                        <input class="bg-zinc-800 border border-zinc-700 p-3 rounded-lg w-full  " type="text" name="genre"
+                            id="genre" placeholder="Ex. Drame, Comédie" >
+                       <p id="err-genre" class="text-red-500 text-xs mt-1"></p>
+                    </div>
+                    <div   class="col-span-2">
+                    <label for="desc">Description <span class="text-xs text-zinc-400">facultative</span></label>
+                    <textarea  id="desc" class="bg-zinc-800 border border-zinc-700 p-3 rounded-lg w-full mt-4" 
+                        placeholder="Résume la série en quelques mots…"></textarea>
+</div>
+<div  class="col-span-3" >
+                    <button type="submit" class="bg-white  text-black p-2 border rounded-lg ">＋ Ajouter la série</button>
+
+                </div>
+            </form>
+        </section>
+        <section class="rechercher ">
+            <h3 class="font-bold text-lg">Catalogue des séries</h3>
+            <p class="text-xs text-zinc-400 mt-1">Recherche par nom ou explore un genre.</p>
+        </section>
+        <form
+            class="form-botton bg-zinc-900 border border-zinc-800 p-5 rounded-2xl mt-5 flex flex-col md:flex-row gap-4 md:items-end">
+            <div class="flex-1 flex flex-col gap-2">
+
+                <label for="rech" Class="font-bold">Recherche</label>
+
+                <input class="w-full bg-zinc-800 border border-zinc-700 p-3 rounded-lg outline-none" type="text"
+                    id="rech" placeholder="Ex. Breaking Bad">
+            </div>
+            <div class="flex flex-col gap-2">
+                <label for="gen" class="font-bold">Genre</label>
+                <select id="gen" class="w-full bg-zinc-800 border border-zinc-700 p-3 rounded-lg outline-none">
+                    <option value="Tous les genres" selected>Tous les genres</option>
+                    <option value="Drame">Drame</option>
+                    <option value="Fantastique">Fantastique</option>
+                    <option value="Policier">Policier</option>
+                    <option value="Comédie">Comédie</option>
+                    <option value="Science-fiction">Science-fiction</option>
+                </select>
+            </div>
+            <button  id='reset' type="button" class="bg-zinc-800 border border-zinc-700 p-3 px-4 rounded-lg whitespace-nowrap"> ↻
+                Réinitialiser</button>
+        </form>
+
+        <section class="afficher ">
+            <p><span>6</span> séries affichées</p>
+            <div id="catalogue" class="liste grid grid-col-1 lg:grid-cols-3 gap-6 mt-3">
+                <article class="cards  bg-zinc-900 border border-zinc-800 rounded-xl">
+
+                    <img src="" alt="image " class="image">
+                    <div class="card p-4">
+                        <h3 class="font-bold"> Breaking Bad</h3>
+                        <div class="flex gap-2 mt-2">
+                            <span class="  text-xs bg-zinc-500  text-zinc-300 border-zinc-300 rounded-xs">Drame</span>
+                            <span class="text-xs bg-zinc-500  text-zinc-300 border-zinc-300 rounded-xs">Policier</span>
+                        </div>
+                        <p class="text-xs text-zinc-300 mt-2"> Un professeur de chimie mène une double vie. </p>
+                    </div>
+                </article>
+                <article class="cards  bg-zinc-900 border border-zinc-800 rounded-xl">
+                    <img src="" alt="image" class="w-full h-40 object-cover rounded-t-xl">
+                    <div class="card p-4">
+                        <h3 class="font-bold"> Breaking Bad</h3>
+                        <span class="text-xs bg-zinc-500  text-zinc-300 border-zinc-300 rounded-xs">Drame</span>
+                        <span class="text-xs bg-zinc-500  text-zinc-300 border-zinc-300 rounded-xs">Policier</span>
+                        <p class="text-xs text-zinc-300 mt-2"> Un professeur de chimie mène une double vie. </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+
+    <script src="/JS/script.js"></script>
+</body>
+
+</html>
