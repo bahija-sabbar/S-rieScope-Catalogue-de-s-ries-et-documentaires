@@ -160,3 +160,77 @@ fetch(api)
     console.log(data);
   });
 }
+
+
+  function validerFormulaire(titre, genre) {
+let  Valide=true;
+
+   if (titre === "") {
+   erreurNom.textContent = "Le titre est obligatoire";
+    Valide = false;
+  }
+     if (genre === "") {
+   erreurGenre.textContent = "Le genre est obligatoire";
+
+    Valide = false;
+  }
+return Valide;
+
+ // TODO : afficher les erreurs des champs concernés.
+  // TODO : retourner true si les trois valeurs sont valides, sinon false.
+
+}
+const Nom=document.querySelector('#nom');
+const Genre=document.querySelector('#genre');
+const Desc=document.querySelector('#desc');
+
+function ajouterSerie(event) {
+  event.preventDefault();
+   const nom = Nom.value.trim();
+  const genre = Genre.value.trim();
+  const desc = Desc.value.trim();
+
+ if (validerFormulaire(nom, genre) === false) {
+    return; 
+  }
+   const nouvelleSerie = {
+    name: nom,
+    language: "Non renseigné",
+    genres: genre.split(',').map(g => g.trim()).filter(g => g !== ""),
+    status: "Non renseigné",
+    image: null,
+    summary: desc
+  };
+    series.unshift(nouvelleSerie);
+event.target.reset();
+alert('Série ajoutée avec succès')
+ actualiserCatalogue();
+
+
+  // TODO : lire titre, langue et genre depuis le formulaire.
+  // TODO : si la validation échoue, arrêter avec return.
+  // TODO : créer cet objet avec les valeurs récupérées :
+  // { name: titre, language: langue, genres: [genre],
+  //   status: "Non renseigné", image: null }
+  // TODO : push(), reset(), confirmation, actualiserCatalogue().
+}
+formulaire.addEventListener('submit', ajouterSerie);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
