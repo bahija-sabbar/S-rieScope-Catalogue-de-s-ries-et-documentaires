@@ -159,10 +159,9 @@ fetch(api)
     }
     console.log(data);
   });
+  
 
-
-
-  function validerFormulaire(titre, genre) {
+function validerFormulaire(titre, genre) {
 let  Valide=true;
 
    if (titre === "") {
@@ -215,22 +214,4 @@ alert('Série ajoutée avec succès')
   // TODO : push(), reset(), confirmation, actualiserCatalogue().
 }
 formulaire.addEventListener('submit', ajouterSerie);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
