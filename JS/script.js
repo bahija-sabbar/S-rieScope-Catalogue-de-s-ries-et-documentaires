@@ -159,7 +159,7 @@ fetch(api)
     }
     console.log(data);
   });
-}
+
 
 
   function validerFormulaire(titre, genre) {
