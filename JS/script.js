@@ -232,3 +232,4 @@ formulaire.addEventListener('submit', ajouterSerie);
 
 
 
+}
