@@ -159,3 +159,4 @@ fetch(api)
     }
     console.log(data);
   });
+}
