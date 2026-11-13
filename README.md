@@ -4,8 +4,10 @@
 **SérieScope** est une application web monopage (SPA) développée pour une médiathèque. Elle permet aux visiteurs de parcourir un catalogue en ligne de séries et de documentaires, d'effectuer des recherches par titre et de filtrer les œuvres par genre. L'interface intègre également un formulaire permettant à l'équipe de la médiathèque d'ajouter de nouvelles séries en temps réel.
 
 🔗 Liens
-Démo en ligne: (https://bahija-sabbar.github.io/AutoPark-Gestion-d-un-parc-automobile/)
+Démo en ligne: https://bahija-sabbar.github.io/S-rieScope-Catalogue-de-s-ries-et-documentaires/
+
 Repo GitHub:https://github.com/bahija-sabbar/S-rieScope-Catalogue-de-s-ries-et-documentaires
+
 Jira: https://drakeyop95.atlassian.net/jira/software/projects/SER/boards/70?filter=&groupBy=none
 
 ## ✨ Fonctionnalités principales
